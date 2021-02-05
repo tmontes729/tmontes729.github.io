@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>A-Frame - Image Textures</title>
+	<script src="js/aframe-master.1.0.4.min.js"></script>
+</head>
+
+<body>
+<a-scene antialias="true">
+	
+	<a-assets>
+		<img id="sky" src="images/sistine.jpg" crossorigin="anonymous" />
+		<img id="marble" src="images/marble.jpg" crossorigin="anonymous" />
+		<img id="brick" src="images/wbrick.jpg" crossorigin="anonymous" />
+		<img id="earth" src="images/earth-sphere.jpg" crossorigin="anonymous" />
+		<img id="column" src="images/column.jpg" crossorigin="anonymous" />
+	</a-assets>
+		
+	<a-sky 
+		color = "#FFFFFF"
+		material = "src: #sky">
+	</a-sky>
+
+	<a-plane
+		width="100" height="100"
+		position=" 0.00 0.00 0.00" 
+		rotation="-90 0 0" 
+		color="#888888" 
+		material="src: #marble; repeat:10 10; transparent: true; opacity: 0.95"
+		shadow="cast: false; receive: true">
+	</a-plane>
+	
+	<a-box
+		width = ".1" height = "5" depth = "18"
+		position = "-5 2.5 4"
+		rotation = "0 45 0"  
+		color = "#FFFFFF"
+		material = "src: #brick"
+		shadow = "cast: true; receive: true">
+	</a-box>
+    
+    <a-box
+		width = ".1" height = "5" depth = "18"
+		position = "6 2.5 4"
+		rotation = "0 -40 0"  
+		color = "#FFFFFF"
+		material = "src: #brick"
+		shadow = "cast: true; receive: true">
+	</a-box>
+	
+    <a-box
+		width = ".1" height = "5" depth = "18"
+		position = "-5 2.5 -8"
+		rotation = "0 -40 0"  
+		color = "#FFFFFF"
+		material = "src: #brick"
+		shadow = "cast: true; receive: true">
+	</a-box>
+    
+    <a-box
+		width = ".1" height = "5" depth = "20"
+		position = "4 2.5 -8"
+		rotation = "0 60 0"  
+		color = "#FFFFFF"
+		material = "src: #brick"
+		shadow = "cast: true; receive: true">
+	</a-box>
+    
+	<a-sphere
+		radius = "1.25"
+		position = "10 5.3 -3"
+		material = "src: #earth;"
+		shadow = "cast: true; receive: true">
+	</a-sphere>
+	
+    <a-sphere
+		radius = "1.25"
+		position = "-2 5.3 -10"
+		material = "src: #earth;"
+		shadow = "cast: true; receive: true">
+	</a-sphere>
+    
+    <a-sphere
+		radius = "1.25"
+		position = "1 5.3 9"
+		material = "src: #earth;"
+		shadow = "cast: true; receive: true">
+	</a-sphere>
+    
+    <a-sphere
+		radius = "1.25"
+		position = "-9 5.3 -1.4"
+		material = "src: #earth;"
+		shadow = "cast: true; receive: true">
+	</a-sphere>
+    
+	<a-cylinder
+		radius = "0.5" height = "4"
+		position = " 10 2 -3"
+		color = "#8888BB"
+		material = "src: #column; repeat: 4 2;"
+		shadow = "cast: true; receive: true">
+	</a-cylinder>
+
+<a-cylinder
+		radius = "0.5" height = "4"
+		position = " -2 2 -10"
+		color = "#8888BB"
+		material = "src: #column; repeat: 4 2;"
+		shadow = "cast: true; receive: true">
+	</a-cylinder>
+
+<a-cylinder
+		radius = "0.5" height = "4"
+		position = " 1 2 9"
+		color = "#8888BB"
+		material = "src: #column; repeat: 4 2;"
+		shadow = "cast: true; receive: true">
+	</a-cylinder>
+    
+    <a-cylinder
+		radius = "0.5" height = "4"
+		position = " -9 2 -1.4"
+		color = "#8888BB"
+		material = "src: #column; repeat: 4 2;"
+		shadow = "cast: true; receive: true">
+	</a-cylinder>
+
+</a-scene>
+</body>
+</html>
